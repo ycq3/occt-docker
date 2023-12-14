@@ -6,7 +6,7 @@ WORKDIR /tmp
 
 # ///download/official-upstream-packages/opencascade-7.5.0.tgz
 # https://download.njuu.cf/Open-Cascade-SAS/OCCT/archive/refs/tags/V7_7_2.tar.gz
-RUN wget https://githubfast.com/Open-Cascade-SAS/OCCT/archive/refs/tags/V$(echo $version | sed 's/\./_/g').tar.gz
+RUN wget https://github.com/Open-Cascade-SAS/OCCT/archive/refs/tags/V$(echo $version | sed 's/\./_/g').tar.gz
 # RUN wget https://download.njuu.cf/Open-Cascade-SAS/OCCT/archive/refs/tags/V$(echo $version | sed 's/\./_/g').tar.gz
 RUN tar -zxvf V$(echo $version | sed 's/\./_/g').tar.gz
 RUN mkdir -p /opt/build/
